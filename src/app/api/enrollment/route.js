@@ -29,7 +29,7 @@ export const GET = async (request) => {
   }
 
   //Check role here. If user is "ADMIN" show all of the enrollments instead
-  if(role == "ADMIN"){
+  if(role === "ADMIN"){
     return NextResponse.json({
       ok: true,
       enrollments: DB.enrollments //replace null with enrollment data!
@@ -73,7 +73,7 @@ export const POST = async (request) => {
 
   
   //if role is "ADMIN", send the following response
-  if(role == "ADMIN"){
+  if(role === "ADMIN"){
   return NextResponse.json(
     {
       ok: true,
@@ -154,7 +154,7 @@ export const DELETE = async (request) => {
   }
 
   //if role is "ADMIN", send the following response
-  if(role == "ADMIN"){
+  if(role === "ADMIN"){
   return NextResponse.json(
     {
       ok: true,
